@@ -21,7 +21,6 @@ function buttonPressed() {
     document.getElementById("buttonStripe").style.backgroundColor = buttonProperties[2]
     if ((numberOfBatteries > 1 && buttonProperties[0] == "Detonate") || (numberOfBatteries > 2 && litIndicators.includes("FRK"))||(buttonProperties[1]=="red"&&buttonProperties[0]=="Hold")) {
         timeOut = setTimeout(function () {
-            strike()
             fail = true
         }, 1000)
     }
@@ -62,6 +61,9 @@ function buttonReleased() {
         if (fail == false) {
             buttonModuleCompleted()
         }
+        else{
+            strike();
+        }
         fail = false
     }
     //3rd
@@ -74,6 +76,9 @@ function buttonReleased() {
         if (fail == false) {
             buttonModuleCompleted()
         }
+        else{
+            strike();
+        }
         fail = false
     }
     //5th
@@ -85,6 +90,9 @@ function buttonReleased() {
         clearTimeout(timeOut)
         if (fail == false) {
             buttonModuleCompleted()
+        }
+        else{
+            strike();
         }
         fail = false
     }
