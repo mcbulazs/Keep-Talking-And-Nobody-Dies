@@ -1,0 +1,31 @@
+#clockModule{
+    background-color: gray;
+}
+#strikes{
+    margin: auto;
+    margin-top: 85px;
+    border: black solid 2px;
+    width: 50%;
+    height: 100;
+}
+#strike1{
+    text-align: center;
+    font-size: 70;
+    color: darkgrey;
+}
+#strike2{
+    text-align: center;
+    font-size: 70;
+    color: darkgrey;
+}
+#clock{
+   
+    height: 300px;
+    border: 5px black solid;
+    text-align: center;
+}
+#clock h1{
+    color: red;
+    font-size: 200px;
+}
+

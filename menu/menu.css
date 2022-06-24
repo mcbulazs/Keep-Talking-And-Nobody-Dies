@@ -1,0 +1,48 @@
+#pause{
+    position: fixed; 
+}
+#pauseIcon{
+    width:100px;
+}
+#playIcon{
+    width:100px
+}
+#restartIcon{
+    width:100px;
+    bottom: 0;
+    position: absolute;
+}
+#gameMenu{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    align-items: center;
+    /*position: fixed;
+    opacity: 90%;
+    width: 100%;
+    height: 100%;
+    background-color: grey;*/
+}
+#menu{
+    margin: auto;
+    width: 600;
+    height: 280;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 70px;
+}
+#menu h1{
+    font-size: 100px;
+    margin: auto;
+}

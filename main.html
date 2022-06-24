@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="clock/clock.css">
+    <link rel="stylesheet" href="menu/menu.css">
+</head>
+
+<body onload="startTimer()">
+    <div id="pause" >
+        <img id="pauseIcon" onclick="openMenu()" src="pause-icon.png">
+        <h1 id="serialNumber"></h1>
+    </div>
+    <div id="gameMenu">
+        <div onclick="closeMenu()">
+            <img id="playIcon" src="play-icon.png">
+        </div>
+        <div id="menu">
+            <h1 id="menuText">Paused!</h1>
+        </div>
+
+        <div onclick="restart()">
+            <img id="restartIcon" src="restart.png">
+        </div>
+    </div>
+    <div id="mainWindow">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 bigBox" id="clockModule">
+                <div id="strikes" class="row">
+                    <div class="col-6">
+                        <p id="strike1">X</p>
+                    </div>
+                    <div class="col-6">
+                        <p id="strike2">X</p>
+                    </div>
+                </div>
+                <div id="clock">
+
+                </div>
+            </div>
+            <div class="col-md-4 bigBox" id="topCenter"> 
+                <div class="completed" id="completedTopCenter"></div>
+            </div>
+            <div class="col-md-4 bigBox" id="topRight">
+                <div class="completed" id="completedTopRight"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 bigBox" id="bottomLeft">
+                <div class="completed" id="completedBottomLeft"></div>
+            </div>
+            <div class="col-md-4 bigBox" id="bottomCenter">
+                <div class="completed" id="completedBottomCenter"></div>
+            </div>
+            <div class="col-md-4 bigBox" if="bottomRight" onclick="strike()">
+                <div class="completed" id="completedBottomRight"></div></div>
+        </div>
+    </div>
+    <!--<div id="openMenu" onclick="openMenu()">
+        <h1><strong>||</strong></h1>
+    </div>-->
+
+
+
+    
+    <script src="main.js"></script>
+    <script src="menu/menu.js"></script>
+    <script src="clock/clock.js"></script>
+    <script src="wireModule/wireModule.js"></script>
+</body>
+
+</html>
