@@ -11,19 +11,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="clock/clock.css">
     <link rel="stylesheet" href="menu/menu.css">
+    <link rel="stylesheet" href="buttonModule/buttonModule.css">
+    <link rel="stylesheet" href="animation.css">
 </head>
 
-<body onload="startTimer()">
+<body onload="loaded()">
     <div id="pause" >
         <img id="pauseIcon" onclick="openMenu()" src="pause-icon.png">
-        <h1 id="serialNumber"></h1>
+        
     </div>
     <div id="gameMenu">
         <div onclick="closeMenu()">
             <img id="playIcon" src="play-icon.png">
         </div>
+        <div id="bombInfo">
+            <h1>Bomb Info</h1>
+            <h3 id="serialNumber"></h3>
+            <h3 id="batteries"></h3>
+        </div>
         <div id="menu">
             <h1 id="menuText">Paused!</h1>
+        </div>
+        <div id="indicators">
+            <h1>Indicators</h1>
         </div>
 
         <div onclick="restart()">
@@ -46,21 +56,21 @@
                 </div>
             </div>
             <div class="col-md-4 bigBox" id="topCenter"> 
-                <div class="completed" id="completedTopCenter"></div>
+                <div class="completed" id="completedtopCenter"></div>
             </div>
             <div class="col-md-4 bigBox" id="topRight">
-                <div class="completed" id="completedTopRight"></div>
+                <div class="completed" id="completedtopRight"></div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4 bigBox" id="bottomLeft">
-                <div class="completed" id="completedBottomLeft"></div>
+                <div class="completed" id="completedbottomLeft"></div>
             </div>
-            <div class="col-md-4 bigBox" id="bottomCenter">
-                <div class="completed" id="completedBottomCenter"></div>
+            <div class="col-md-4 bigBox"  id="bottomCenter">
+                <div class="completed" id="completedbottomCenter"></div>
             </div>
             <div class="col-md-4 bigBox" if="bottomRight" onclick="strike()">
-                <div class="completed" id="completedBottomRight"></div></div>
+                <div class="completed" id="completedbottomRight"></div></div>
         </div>
     </div>
     <!--<div id="openMenu" onclick="openMenu()">
@@ -74,6 +84,7 @@
     <script src="menu/menu.js"></script>
     <script src="clock/clock.js"></script>
     <script src="wireModule/wireModule.js"></script>
+    <script src="buttonModule/buttonModule.js"></script>
 </body>
 
 </html>

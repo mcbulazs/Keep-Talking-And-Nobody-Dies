@@ -1,5 +1,6 @@
 #pause{
     position: fixed; 
+    z-index: 2;
 }
 #pauseIcon{
     width:100px;
@@ -22,7 +23,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
     align-items: center;
     /*position: fixed;
@@ -32,7 +33,11 @@
     background-color: grey;*/
 }
 #menu{
+    position: absolute;
     margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 600;
     height: 280;
     background-color: rgba(0,0,0,0.9);
@@ -45,4 +50,35 @@
 #menu h1{
     font-size: 100px;
     margin: auto;
+}
+
+#bombInfo{
+    position: absolute;
+    top: 150;
+    background-color: yellow;
+    width: 30%;
+    padding: 20px;
+    border-radius: 100px;
+}
+#bombInfo h1{
+    text-align: center;
+}
+#indicators{
+    position: absolute;
+    background-color: green;
+    width: 30%;
+    padding: 20px;
+    border-radius: 100px;
+    right: 0;
+    top: 150;
+    text-align: right;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+#indicators h1{
+    text-align: center;
+}
+#indicators h3{
+    margin-right: 20%;
 }

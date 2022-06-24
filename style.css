@@ -1,3 +1,10 @@
+*{
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
 .bigBox{
     height: 490;
     border: black solid 2px;
@@ -25,5 +32,9 @@
     position: absolute;
     top: 0;
     right: 0;
+    
     border-radius: 100px;
+    z-index: 2;
 }
+
+

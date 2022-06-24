@@ -1,12 +1,14 @@
 var min5=300000
 var distance = min5
 var Timer
+var minutes
+var seconds
 function startTimer(){
     Timer = setInterval(
         function(){
     distance=distance-1000
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    seconds = Math.floor((distance % (1000 * 60)) / 1000);
     if(seconds<10)
     {
         seconds="0"+seconds;
@@ -20,8 +22,10 @@ function startTimer(){
     
 },1000)}
 var currentStrikes=2
-function strike(){
 
+function strike(){
+    document.getElementById("mainWindow").classList.add("shake-horizontal")
+    setTimeout(function(){document.getElementById("mainWindow").classList.remove("shake-horizontal")},400);
     currentStrikes--
     if(currentStrikes<0)
     {

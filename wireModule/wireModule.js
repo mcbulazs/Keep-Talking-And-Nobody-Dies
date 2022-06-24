@@ -1,6 +1,8 @@
 var wires = []
-wiresModule()
-function wiresModule() {
+var goodWire
+var wireModulePosition
+function wiresModule(module) {
+    wireModulePosition=module
     var numberOfWires = Math.floor(Math.random() * 4) + 3
     var colors = ["red", "yellow", "white", "black", "blue"]
     for (let i = 0; i < numberOfWires; i++) {
@@ -8,10 +10,10 @@ function wiresModule() {
         wires.push(x)
     }
     for (let i = 0; i < wires.length; i++) {
-        document.getElementById("topCenter").innerHTML += `<div id='wire${i}' class='wires' style='background-color:${wires[i]}' onClick='wireCut(${i})'></div>`
+        document.getElementById(module).innerHTML += `<div id='wire${i}' class='wires' style='background-color:${wires[i]}' onClick='wireCut(${i})'></div>`
     }
+    goodWire = correctWire()
 }
-goodWire = correctWire()
 function correctWire() {
     var x = false;
     //3 wire
@@ -154,15 +156,12 @@ function correctWire() {
     }
 }
 function wireCut(number) {
-
     document.getElementById(`wire${number}`).style.border = "10px dotted purple"
     document.getElementById(`wire${number}`).removeAttribute("onClick")
     if (number==goodWire) {
         modulesDone++;
-        document.getElementById("completedTopCenter").style.backgroundColor="green"
-        for (let i = 0; i < wires.length; i++) {
-            document.getElementById(`wire${i}`).removeAttribute("onClick")
-        }
+        document.getElementById(`completed${wireModulePosition}`).style.backgroundColor="green"
+        
     }
     else{
         strike();
