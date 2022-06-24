@@ -42,7 +42,7 @@ function stripeCorrect() {
 
 
 
-    if (bool = true) {
+    if (bool == true) {
         buttonModuleCompleted()
     }
     else {
