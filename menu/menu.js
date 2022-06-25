@@ -10,3 +10,4 @@ function restart(){
     location.reload();
 }
 //asdasd
+//dsaf
