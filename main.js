@@ -55,7 +55,7 @@ function loaded() {
     wiresModule("bottomCenter")
     buttonModule("bottomRight")
     symbolsModule("topCenter")
-    simonsaysModule("bottomLeft")
+    simonsaysModule("topRight")
 }
 
 
