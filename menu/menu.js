@@ -10,3 +10,5 @@ function restart(){
     location.reload();
 }
 //valami
+//asdasd
+//dsaf
