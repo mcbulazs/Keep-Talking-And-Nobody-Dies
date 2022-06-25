@@ -21,13 +21,13 @@ function startTimer(){
     }
     
 },1000)}
-var currentStrikes=2
+var currentStrikes=0
 
 function strike(){
     document.getElementById("mainWindow").classList.add("shake-horizontal")
     setTimeout(function(){document.getElementById("mainWindow").classList.remove("shake-horizontal")},400);
-    currentStrikes--
-    if(currentStrikes<0)
+    currentStrikes++
+    if(currentStrikes>2)
     {
         gameOver();
     }

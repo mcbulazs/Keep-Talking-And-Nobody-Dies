@@ -15,79 +15,79 @@
     <link rel="stylesheet" href="wireModule/wireModule.css">
     <link rel="stylesheet" href="buttonModule/buttonModule.css">
     <link rel="stylesheet" href="symbolsModule/symbolsModule.css">
+    <link rel="stylesheet" href="simonsaysModule/simonsaysModule.css">
 </head>
 
 <body onload="loaded()">
-    <div id="pause" >
-        <img id="pauseIcon" onclick="openMenu()" src="images/pause-icon.png">
-        
+    <div class="corner" onclick="openMenu()">
+        <img id="pauseIcon" src="images/pause-icon.png">
+
     </div>
     <div id="gameMenu">
-        <div onclick="closeMenu()">
+        <div onclick="closeMenu()" class="corner">
             <img id="playIcon" src="images/play-icon.png">
         </div>
-        <div id="bombInfo">
-            <h1>Bomb Info</h1>
-            <h3 id="serialNumber"></h3>
-            <h3 id="batteries"></h3>
+        <div class="row">
+            <div id="bombInfo" class="col-4">
+                <h1>Bomb Info</h1>
+                <h3 id="serialNumber"></h3>
+                <h3 id="batteries"></h3>
+            </div>
+            <div id="menu" class="col-4">
+                <h1 id="menuText">Paused!</h1>
+            </div>
+            <div id="indicators" class="col-4">
+                <h1>Indicators</h1>
+            </div>
         </div>
-        <div id="menu">
-            <h1 id="menuText">Paused!</h1>
-        </div>
-        <div id="indicators">
-            <h1>Indicators</h1>
-        </div>
-
         <div onclick="restart()">
             <img id="restartIcon" src="images/restart.png">
         </div>
     </div>
     <div id="mainWindow">
-        <div class="row">
-            <div class="col-md-4 col-sm-6 bigBox" id="clockModule">
-                <div id="strikes" class="row">
-                    <div class="col-6">
-                        <p id="strike1">X</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 bigBox" id="clockModule">
+                    <div id="strikes" class="row">
+                        <div class="col-6 ">
+                            <p id="strike1">X</p>
+                        </div>
+                        <div class="col-6">
+                            <p id="strike2">X</p>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <p id="strike2">X</p>
-                    </div>
+                    <div id="clock"></div>
                 </div>
-                <div id="clock">
+                <div class="col-4 bigBox" id="topCenter">
+                    <div class="completed" id="completedtopCenter"></div>
+                </div>
+                <div class="col-4 bigBox" id="topRight">
+                    <div class="completed" id="completedtopRight"></div>
+                </div>
 
+                <div class="col-4 bigBox" id="bottomLeft">
+                    <div class="completed" id="completedbottomLeft"></div>
+                </div>
+                <div class="col-4 bigBox" id="bottomCenter">
+                    <div class="completed" id="completedbottomCenter"></div>
+                </div>
+                <div class="col-4 bigBox" id="bottomRight">
+                    <div class="completed" id="completedbottomRight"></div>
                 </div>
             </div>
-            <div class="col-md-4 bigBox" id="topCenter"> 
-                <div class="completed" id="completedtopCenter"></div>
-            </div>
-            <div class="col-md-4 bigBox" id="topRight">
-                <div class="completed" id="completedtopRight"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 bigBox" id="bottomLeft">
-                <div class="completed" id="completedbottomLeft"></div>
-            </div>
-            <div class="col-md-4 bigBox"  id="bottomCenter">
-                <div class="completed" id="completedbottomCenter"></div>
-            </div>
-            <div class="col-md-4 bigBox" if="bottomRight" onclick="strike()">
-                <div class="completed" id="completedbottomRight"></div></div>
         </div>
     </div>
-    <!--<div id="openMenu" onclick="openMenu()">
-        <h1><strong>||</strong></h1>
-    </div>-->
 
 
 
-    
+
     <script src="main.js"></script>
     <script src="menu/menu.js"></script>
     <script src="clock/clock.js"></script>
     <script src="wireModule/wireModule.js"></script>
     <script src="buttonModule/buttonModule.js"></script>
     <script src="symbolsModule/symbolsModule.js"></script>
+    <script src="simonsaysModule/simonsaysModule.js"></script>
 </body>
 
 </html>

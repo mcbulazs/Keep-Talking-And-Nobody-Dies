@@ -1,12 +1,12 @@
-#pause{
+.corner{
     position: fixed; 
     z-index: 2;
 }
 #pauseIcon{
-    width:100px;
+    width:20%;
 }
 #playIcon{
-    width:100px
+    width:20%
 }
 #restartIcon{
     width:100px;
@@ -24,44 +24,7 @@
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 3;
-    cursor: pointer;
     align-items: center;
-    /*position: fixed;
-    opacity: 90%;
-    width: 100%;
-    height: 100%;
-    background-color: grey;*/
-}
-#menu{
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 600;
-    height: 280;
-    background-color: rgba(0,0,0,0.9);
-    color: white;
-    border-radius: 100px;
-    text-align: center;
-    font-size: 100px;
-    padding-top: 70px;
-}
-#menu h1{
-    font-size: 100px;
-    margin: auto;
-}
-
-#bombInfo{
-    position: absolute;
-    top: 150;
-    background-color: yellow;
-    width: 30%;
-    padding: 20px;
-    border-radius: 100px;
-}
-#bombInfo h1{
-    text-align: center;
 }
 #indicators{
     position: absolute;
@@ -70,7 +33,7 @@
     padding: 20px;
     border-radius: 100px;
     right: 0;
-    top: 150;
+    top: 25%;
     text-align: right;
     font-size: 30px;
     font-weight: bold;
@@ -81,4 +44,35 @@
 }
 #indicators h3{
     margin-right: 20%;
+}
+#menu{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 35%;
+    height: 300;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    border-radius: 1000px;
+    text-align: center;
+    font-size: 70px;
+    padding: 100px;
+}
+#menu h1{
+    font-size: 100%;
+    margin: auto;
+}
+
+#bombInfo{
+    position: absolute;
+    top: 25%;
+    background-color: yellow;
+    width: 30%;
+    padding: 20px;
+    border-radius: 100px;
+}
+#bombInfo h1{
+    text-align: center;
 }

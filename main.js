@@ -1,6 +1,8 @@
 var modulesDone =0
 var numberOfBatteries
 var serialNumber
+var vowels = ["A","E","U","I","O"]
+var vowelInSerialNumber = false
 var litIndicators = []
 function loaded() {
     //serial number
@@ -8,6 +10,21 @@ function loaded() {
     var serialNumberPossiblities = ["AL5QF2", "MV6SP3", "TR9SF6", "AG6EC7"]
     serialNumber = serialNumberPossiblities[Math.floor(Math.random() * 4)]
     document.getElementById("serialNumber").innerText = "S/N: " + serialNumber
+
+    for (let i = 0; i < serialNumber.length; i++) {
+        for (let j = 0; j <vowels.length; j++) {
+           if (serialNumber[i]==vowels[j]) {
+            vowelInSerialNumber = true    
+            break
+           }
+        }
+        if (vowelInSerialNumber) {
+            break
+        }
+    }
+    console.log("is there a vowel: "+vowelInSerialNumber)
+
+
     //batteries
     numberOfBatteries=(Math.floor(Math.random() * 4) + 1)
     document.getElementById("batteries").innerText = "Number of batteries: " + numberOfBatteries
@@ -36,6 +53,9 @@ function loaded() {
     //other
     startTimer();
     wiresModule("bottomCenter")
-    buttonModule("bottomLeft")
+    buttonModule("bottomRight")
     symbolsModule("topCenter")
+    simonsaysModule("bottomLeft")
 }
+
+

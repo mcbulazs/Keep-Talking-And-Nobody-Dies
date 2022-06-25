@@ -1,0 +1,14 @@
+.simonBrick {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    left:0%;
+    right: 0%;
+    bottom:0%;
+    top:0%;
+    margin: auto;
+    border: 3px solid black;
+    transform: rotate(45deg);
+    background-color: grey;
+    
+}
