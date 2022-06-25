@@ -104,4 +104,5 @@ function buttonReleased() {
 }
 function buttonModuleCompleted() {
     document.getElementById(`completed${buttonModulePosition}`).style.backgroundColor="green"
+    modulesDone++
 }

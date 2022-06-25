@@ -1,0 +1,8 @@
+.symbolBrick {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    border: 3px solid black;
+    background-size: cover;
+    background-color: grey;
+}

@@ -37,4 +37,5 @@ function loaded() {
     startTimer();
     wiresModule("bottomCenter")
     buttonModule("bottomLeft")
+    symbolsModule("topCenter")
 }

@@ -9,20 +9,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="clock/clock.css">
     <link rel="stylesheet" href="menu/menu.css">
-    <link rel="stylesheet" href="buttonModule/buttonModule.css">
+    <link rel="stylesheet" href="clock/clock.css">
     <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="wireModule/wireModule.css">
+    <link rel="stylesheet" href="buttonModule/buttonModule.css">
+    <link rel="stylesheet" href="symbolsModule/symbolsModule.css">
 </head>
 
 <body onload="loaded()">
     <div id="pause" >
-        <img id="pauseIcon" onclick="openMenu()" src="pause-icon.png">
+        <img id="pauseIcon" onclick="openMenu()" src="images/pause-icon.png">
         
     </div>
     <div id="gameMenu">
         <div onclick="closeMenu()">
-            <img id="playIcon" src="play-icon.png">
+            <img id="playIcon" src="images/play-icon.png">
         </div>
         <div id="bombInfo">
             <h1>Bomb Info</h1>
@@ -37,7 +39,7 @@
         </div>
 
         <div onclick="restart()">
-            <img id="restartIcon" src="restart.png">
+            <img id="restartIcon" src="images/restart.png">
         </div>
     </div>
     <div id="mainWindow">
@@ -85,6 +87,7 @@
     <script src="clock/clock.js"></script>
     <script src="wireModule/wireModule.js"></script>
     <script src="buttonModule/buttonModule.js"></script>
+    <script src="symbolsModule/symbolsModule.js"></script>
 </body>
 
 </html>
