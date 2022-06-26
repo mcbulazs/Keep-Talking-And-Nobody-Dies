@@ -22,7 +22,7 @@ function loaded() {
             break
         }
     }
-    console.log("is there a vowel: "+vowelInSerialNumber)
+    console.log("is there a vowel: " + vowelInSerialNumber)
 
 
     //batteries
@@ -44,7 +44,7 @@ function loaded() {
     for (let i = 0; i < indicators.length; i++) {
      
         if (litIndicators.includes(indicators[i])) {
-            document.getElementById("indicators").innerHTML+=`<h3 style="color:white">\n${indicators[i]}</h3>`
+            document.getElementById("indicators").innerHTML+=`<h3>\n${indicators[i]}</h3>`
         }
         else{
             document.getElementById("indicators").innerHTML+=`<h3>${indicators[i]}</h3>`
@@ -57,5 +57,9 @@ function loaded() {
     symbolsModule("topCenter")
     simonsaysModule("topRight")
 }
-
-
+//Hotkeys
+let over = false
+document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && !over) toggleMenu()
+    else if(e.key === "r" || e.key === "R") this.location.reload()
+})

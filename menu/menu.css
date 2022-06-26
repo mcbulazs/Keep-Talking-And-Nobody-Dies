@@ -1,78 +1,18 @@
 .corner{
-    position: fixed; 
-    z-index: 2;
+    position: fixed;
 }
-#pauseIcon{
-    width:20%;
-}
-#playIcon{
-    width:20%
+#pauseIcon, #playIcon{
+    max-width: 70px;
+    cursor: pointer;
 }
 #restartIcon{
-    width:100px;
+    max-width: 70px;
     bottom: 0;
     position: absolute;
+    cursor: pointer;
 }
 #gameMenu{
     position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 3;
-    align-items: center;
-}
-#indicators{
-    position: absolute;
-    background-color: green;
-    width: 30%;
-    padding: 20px;
-    border-radius: 100px;
-    right: 0;
-    top: 25%;
-    text-align: right;
-    font-size: 30px;
-    font-weight: bold;
-    
-}
-#indicators h1{
-    text-align: center;
-}
-#indicators h3{
-    margin-right: 20%;
-}
-#menu{
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 35%;
-    height: 300;
-    background-color: rgba(0,0,0,0.9);
-    color: white;
-    border-radius: 1000px;
-    text-align: center;
-    font-size: 70px;
-    padding: 100px;
-}
-#menu h1{
-    font-size: 100%;
-    margin: auto;
-}
-
-#bombInfo{
-    position: absolute;
-    top: 25%;
-    background-color: yellow;
-    width: 30%;
-    padding: 20px;
-    border-radius: 100px;
-}
-#bombInfo h1{
-    text-align: center;
 }

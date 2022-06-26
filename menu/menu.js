@@ -1,14 +1,7 @@
-function openMenu(){
-    document.getElementById("gameMenu").style.display="block"
-    document.getElementById("pauseIcon").style.display="none"
-}
-function closeMenu(){
-    document.getElementById("gameMenu").style.display="none"
-    document.getElementById("pauseIcon").style.display="block"
+function toggleMenu(){
+    document.getElementById("gameMenu").classList.toggle('d-none')
+    document.getElementById("pauseIcon").classList.toggle('d-none')
 }
 function restart(){
     location.reload();
 }
-//valami
-//asdasd
-//dsaf

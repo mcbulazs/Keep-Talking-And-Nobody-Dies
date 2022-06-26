@@ -10,12 +10,12 @@
 }
 #strike1{
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     color: darkgrey;
 }
 #strike2{
     text-align: center;
-    font-size:60px;
+    font-size: 50px;
     color: darkgrey;
 }
 #clock{
@@ -25,6 +25,5 @@
 }
 #clock h1{
     color: red;
-    font-size: 200px;
+    font-size: 5rem;
 }
-

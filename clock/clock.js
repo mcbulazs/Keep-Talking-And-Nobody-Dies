@@ -7,12 +7,9 @@ function startTimer(){
     Timer = setInterval(
         function(){
     distance=distance-1000
-    minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    if(seconds<10)
-    {
-        seconds="0"+seconds;
-    }
+    minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    seconds = Math.floor((distance % (1000 * 60)) / 1000)
+    seconds = seconds < 10 ? "0" + seconds : seconds
     document.getElementById("clock").innerHTML=`<h1>${minutes}:${seconds}</h1>`
     if (distance<0) {
         clearInterval(Timer)
@@ -43,8 +40,8 @@ function strike(){
 
 function gameOver(){
     clearInterval(Timer);
+    over = true
     document.getElementById("menuText").innerText="Game Over"
-    document.getElementById("gameMenu").style.display="block"
-    document.getElementById("pauseIcon").style.display="none"
-    document.getElementById("playIcon").style.display="none"
+    toggleMenu()
+    document.getElementById("playIcon").classList.toggle('d-none')
 }

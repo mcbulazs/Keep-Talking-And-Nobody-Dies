@@ -1,0 +1,2 @@
+- clock modulet kipofozni
+- minigamen belüli egységek illeszkedésének javítása

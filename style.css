@@ -5,17 +5,14 @@
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */
 }
-
+html, body{
+    height: 100%;
+}
 .bigBox{
     aspect-ratio: 1/1;
-    border: black solid 2px;
     background-color: lightgray;
     position: relative;
 }
-#mainWindow{
-    margin: auto;
-}
-
 .completed{
     width: 10%;
     height: 10%;
@@ -26,5 +23,3 @@
     border-radius: 100%;
     z-index: 2;
 }
-
-

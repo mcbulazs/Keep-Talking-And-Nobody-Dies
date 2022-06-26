@@ -19,14 +19,34 @@
 </head>
 
 <body onload="loaded()">
-    <div class="corner" onclick="openMenu()">
-        <img id="pauseIcon" src="images/pause-icon.png">
-
+    <div class="corner" onclick="toggleMenu()">
+        <img id="pauseIcon" src="images/pause-icon.png" class="img-fluid m-2">
     </div>
-    <div id="gameMenu">
-        <div onclick="closeMenu()" class="corner">
-            <img id="playIcon" src="images/play-icon.png">
+    <div id="gameMenu" class="d-none h-100 w-100">
+        <div onclick="toggleMenu()" class="corner">
+            <img id="playIcon" src="images/play-icon.png" class="img-fluid m-2">
         </div>
+        <div class="d-flex justify-content-center align-items-center h-100 m-2">
+            <div class="container" style="max-width: 750px;">
+                <div class="row border-light pb-2">
+                    <h1 class="text-center text-light" id="menuText">Paused</h1>
+                    <div class="col-4 bg-warning rounded border border-light">
+                        <div style="min-height: 200px;">
+                            <h2 class="text-center">Bomb Info</h2>
+                            <h3 id="serialNumber"></h3>
+                            <h3 id="batteries"></h3>
+                        </div>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4 bg-success rounded border border-light">
+                        <div style="min-height: 200px;" id="indicators">
+                            <h2 class="text-center">Indicators</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- régi menü, törölhető
         <div class="row">
             <div id="bombInfo" class="col-4">
                 <h1>Bomb Info</h1>
@@ -39,39 +59,48 @@
             <div id="indicators" class="col-4">
                 <h1>Indicators</h1>
             </div>
-        </div>
+        </div>-->
         <div onclick="restart()">
-            <img id="restartIcon" src="images/restart.png">
+            <img id="restartIcon" src="images/restart.png" class="m-2">
         </div>
     </div>
-    <div id="mainWindow">
+    <div id="mainWindow" class="d-flex justify-content-center align-items-center h-100">
         <div class="container">
             <div class="row">
-                <div class="col-4 bigBox" id="clockModule">
+                <div class="col-4 bigBox border border-dark border-3" id="clockModule">
+                    <!-- új clock UI próbálkozás, még maradjon -->
+                    <!-- <div class="border border-dark m-auto mt-2" style="width: 40%; height: 25%">
+                        <div class="row h-100">
+                            <div class="col-6 d-flex justify-content-center align-items-center h-100">
+                                <p class="m-0 fs-sm-2" id="strike1">X</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center h-100">X</div>
+                        </div>
+                    </div> -->
                     <div id="strikes" class="row">
-                        <div class="col-6 ">
-                            <p id="strike1">X</p>
+                        <div class="col-6">
+                            <p id="strike1" class="m-0">X</p>
                         </div>
                         <div class="col-6">
-                            <p id="strike2">X</p>
+                            <p id="strike2" class="m-0">X</p>
                         </div>
                     </div>
                     <div id="clock"></div>
                 </div>
-                <div class="col-4 bigBox" id="topCenter">
+                <div class="col-4 bigBox border border-dark border-3 border-start-0" id="topCenter">
                     <div class="completed" id="completedtopCenter"></div>
                 </div>
-                <div class="col-4 bigBox" id="topRight">
+                <div class="col-4 bigBox border border-dark border-3 border-start-0" id="topRight">
                     <div class="completed" id="completedtopRight"></div>
                 </div>
 
-                <div class="col-4 bigBox" id="bottomLeft">
+                <div class="col-4 bigBox border border-dark border-3 border-top-0" id="bottomLeft">
                     <div class="completed" id="completedbottomLeft"></div>
                 </div>
-                <div class="col-4 bigBox" id="bottomCenter">
+                <div class="col-4 bigBox border border-dark border-3 border-top-0 border-start-0" id="bottomCenter">
                     <div class="completed" id="completedbottomCenter"></div>
                 </div>
-                <div class="col-4 bigBox" id="bottomRight">
+                <div class="col-4 bigBox border border-dark border-3 border-top-0 border-start-0" id="bottomRight">
                     <div class="completed" id="completedbottomRight"></div>
                 </div>
             </div>
